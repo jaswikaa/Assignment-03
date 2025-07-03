@@ -1,0 +1,117 @@
+/* General Page Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Game Container */
+.game-container {
+    background: white;
+    width: 450px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Title */
+h1 {
+    color: #ff4b5c;
+    font-size: 26px;
+}
+
+/* Choices */
+.choices {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.choice {
+    font-size: 40px;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    background: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+}
+
+.choice:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Win/Lose Animations */
+.winner {
+    animation: glow 0.8s infinite alternate;
+}
+
+.loser {
+    animation: shake 0.5s ease-in-out;
+}
+
+/* Result Display */
+h2 {
+    color: #ff4b5c;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+/* Scoreboard */
+h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 5px;
+}
+
+/* Reset Button */
+.reset-btn {
+    background: #ff4b5c;
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+.reset-btn:hover {
+    background: #c0392b;
+}
+
+/* Animations */
+@keyframes glow {
+    from {
+        box-shadow: 0px 0px 15px rgba(0, 255, 0, 0.7);
+    }
+    to {
+        box-shadow: 0px 0px 25px rgba(0, 255, 0, 1);
+    }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+
+/* Fade-in Effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
